@@ -537,8 +537,8 @@ git remote -v
 ```
 
 Sua saída deve ser parecida com:    
-origin  https://seuservidor/seunomedeusuario/nomedoseuprojeto.git (fetch)
-origin  https://seuservidor/seunomedeusuario/nomedoseuprojeto.git (push)
+origin  https://seuservidor/seunomedeusuario/nomedoseuprojeto.git (fetch)    
+origin  https://seuservidor/seunomedeusuario/nomedoseuprojeto.git (push)    
 
 modifique os URL dos repositorios com o comando abaixo:
 
@@ -547,6 +547,6 @@ git remote set-url origin git@seuservidor:seunomedeusuario/nomedoseuprojeto.git
 ```
 
 Agora a Saida devera estar conforme abaixo:    
-origin  git@seuservidor:seunomedeusuario/nomedoseuprojeto.git (fetch)
-origin  git@seuservidor:seunomedeusuario/nomedoseuprojeto.git (push)
+origin  git@seuservidor:seunomedeusuario/nomedoseuprojeto.git (fetch)    
+origin  git@seuservidor:seunomedeusuario/nomedoseuprojeto.git (push)    
 
