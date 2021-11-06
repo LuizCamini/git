@@ -481,62 +481,62 @@ Se o commit estiver com o problema, então ele deverá ser marcado como **ruim**
 
  	git bisect bad
  
-##### Finalizar a pesquisa binária
-Depois de encontrar o commit com problema, para retornar para o *HEAD* utilize:
+##### Finalizar a pesquisa binária    
+Depois de encontrar o commit com problema, para retornar para o *HEAD* utilize:    
 	
 	git bisect reset
 	
-### Aplicando configurações para utilizar o SSH:
+### Aplicando configurações para utilizar o SSH:    
 
-#### Criando chaves:
-Criar Chave ed25519
+#### Criando chaves:    
+Criar Chave ed25519    
 ```shell
 ssh-keygen -t ed25519 -C your_email@example.com
 ```
-Criar uma chave rsa
+Criar uma chave rsa    
 ```shell
 ssh-keygen -t rsa -b 4096 -C your_email@example.com
 ```
 
-#### Adicionar chave privada no ssh-agent
-Rodar o ssh-agent:
+#### Adicionar chave privada no ssh-agent    
+Rodar o ssh-agent:    
 ```shell
 eval $(ssh-agent -s)
 ```
-Incluir a chave privada:
+Incluir a chave privada:    
 ```shell
 ssh-add ~/.ssh/id_ed25519
 ```
 
-#### Copiar Chave publica:
-Linux:
+#### Copiar Chave publica:    
+Linux:    
 ```shell
 cat ~/.ssh/id_ed25519.pub
 ```
 
-Windows:
+Windows:    
 ```shell
 clip < ~/.ssh/id_ed25519.pub
 ```
 
-#### Adicionar chave no github
+#### Adicionar chave no github    
 
 perfil > Settings > SSH and GPG keys
 
 
-#### Testando Chave SSH
+#### Testando Chave SSH    
 ```shell
 ssh -T git@github.com
 ```
 
-#### Modificar Repositorios ja clonados para SSH:
+#### Modificar Repositorios ja clonados para SSH:    
 
-Liste os repositórios remotos existentes e seus URLs com o comando:
+Liste os repositórios remotos existentes e seus URLs com o comando:    
 ```shell
 git remote -v
 ```
 
-Sua saída deve ser parecida com:
+Sua saída deve ser parecida com:    
 origin  https://seuservidor/seunomedeusuario/nomedoseuprojeto.git (fetch)
 origin  https://seuservidor/seunomedeusuario/nomedoseuprojeto.git (push)
 
@@ -546,7 +546,7 @@ modifique os URL dos repositorios com o comando abaixo:
 git remote set-url origin git@seuservidor:seunomedeusuario/nomedoseuprojeto.git
 ```
 
-Agora a Saida devera estar conforme abaixo:
+Agora a Saida devera estar conforme abaixo:    
 origin  git@seuservidor:seunomedeusuario/nomedoseuprojeto.git (fetch)
 origin  git@seuservidor:seunomedeusuario/nomedoseuprojeto.git (push)
 
