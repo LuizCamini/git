@@ -195,6 +195,10 @@ Verifique as demais opções de formatação no [Git Book](http://git-scm.com/bo
 
 	git log --author=usuario
 
+#### Exibir grafico dos commits das Branches
+
+	git log --graph 
+
 ##### Exibir revisão e autor da última modificação de uma bloco de linhas
 
 	git blame -L 12,22 meu_arquivo.txt 
